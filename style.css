@@ -1,0 +1,146 @@
+:root {
+	--orange: hsl(31, 77%, 52%);
+	--cyan: hsl(184, 100%, 22%);
+	--dark-cyan: hsl(179, 100%, 13%);
+	--white-paragraphs: hsla(0, 0%, 100%, 0.75);
+	--light-gray: hsl(0, 0%, 95%);
+	/* (background, headings, buttons) */
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Big Shoulders Display', sans-serif;
+	font-size: 1.5rem;
+	/* font-family: "Lexend Deca", sans-serif; */
+	background-color: var(--light-gray);
+	height: 200vh;
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 320px;
+}
+
+.card {
+	width: 320px;
+	color: var(--light-gray);
+	padding: 4rem 3.5rem;
+}
+
+.card:first-child{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.card-title {
+	text-transform: uppercase;
+	font-size: 4rem;
+	margin: 3rem 0;
+}
+
+.card button {
+	padding: 1.2rem 2.8rem;
+	border-radius: 20px;
+	border: 2px solid transparent;
+	font-size: 1.5rem;
+	font-family: 'Lexend Deca', sans-serif;
+	cursor: pointer;
+}
+
+.card button:hover {
+	background-color: transparent;
+	color: var(--white-paragraphs);
+	border: 2px solid var(--light-gray);
+}
+
+.card-txt {
+	font-family: 'Lexend Deca', sans-serif;
+	color: var(--white-paragraphs);
+	line-height: 3rem;
+	margin-bottom: 2rem;
+}
+
+.card-one {
+	background-color: var(--orange);
+}
+
+.card-one button {
+	color: var(--orange);
+}
+
+.card-two {
+	background-color: var(--cyan);
+}
+
+.card-two button {
+	color: var(--cyan);
+}
+
+.card-three {
+	background-color: var(--dark-cyan);
+}
+
+.card-three button {
+	color: var(--dark-cyan);
+}
+
+
+@media(min-width:992px){
+    .cards {
+        flex-direction: row;
+        align-items: start;
+        width: 100%;
+        max-width: 100%;
+        
+    }
+
+    .card{
+        width: 300px;
+       
+    }
+
+    br{
+        display: none;
+    }
+
+    .card-txt{
+        margin-bottom: 7rem;
+       line-height: 2.5rem;
+       margin-right: 2rem;
+    }
+
+    .card:first-child{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-top-right-radius:0 ;
+    }
+    
+    .card:last-child{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+   
+   
+}
